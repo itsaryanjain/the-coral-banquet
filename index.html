@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Coral Banquet</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins}
+body{
+background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
+color:white;
+}
+
+/* NAV */
+nav{
+display:flex;
+justify-content:space-between;
+padding:20px 40px;
+background:rgba(0,0,0,.4);
+backdrop-filter:blur(10px);
+position:sticky;
+top:0;
+z-index:100;
+}
+
+.logo{
+font-size:22px;
+font-weight:700;
+color:#ffcc70;
+}
+
+.bookbtn{
+background:linear-gradient(45deg,#ff512f,#dd2476);
+padding:10px 20px;
+border-radius:30px;
+color:white;
+text-decoration:none;
+}
+
+/* HERO */
+.hero{
+height:90vh;
+background:url("./photos/1.jpg") center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
+}
+
+.hero::after{
+content:"";
+position:absolute;
+inset:0;
+background:rgba(0,0,0,.65);
+}
+
+.hero h1{
+z-index:2;
+font-size:55px;
+color:#ffcc70;
+}
+
+/* SECTION */
+section{padding:80px 40px}
+
+.title{
+text-align:center;
+font-size:36px;
+margin-bottom:50px;
+color:#ffcc70;
+}
+
+/* SERVICES */
+.services{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+.card{
+background:rgba(255,255,255,.05);
+padding:35px;
+border-radius:20px;
+backdrop-filter:blur(10px);
+transition:.4s;
+border:1px solid rgba(255,255,255,.1);
+}
+
+.card:hover{
+transform:translateY(-15px);
+background:linear-gradient(45deg,#ff512f,#dd2476);
+}
+
+/* GALLERY */
+.gallery{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+}
+
+.gallery img{
+width:100%;
+height:230px;
+object-fit:cover;
+border-radius:15px;
+transition:.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.08);
+}
+
+/* FORM */
+.form{
+max-width:600px;
+margin:auto;
+background:rgba(255,255,255,.05);
+padding:40px;
+border-radius:20px;
+backdrop-filter:blur(15px);
+}
+
+input,select,textarea{
+width:100%;
+padding:15px;
+margin:10px 0;
+border-radius:12px;
+border:none;
+background:rgba(255,255,255,.1);
+color:white;
+}
+
+label{
+font-size:14px;
+opacity:.8;
+}
+
+button{
+width:100%;
+padding:16px;
+border:none;
+border-radius:30px;
+background:linear-gradient(135deg,#25D366,#128C7E);
+color:white;
+font-size:16px;
+cursor:pointer;
+}
+
+/* FOOTER */
+.footer{
+background:rgba(0,0,0,.5);
+padding:50px 40px;
+margin-top:60px;
+}
+
+.footer-container{
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+gap:30px;
+}
+
+.footer h3{
+color:#ffcc70;
+margin-bottom:15px;
+}
+
+.footer p{
+opacity:.8;
+margin:6px 0;
+}
+
+.footer-bottom{
+text-align:center;
+margin-top:30px;
+opacity:.6;
+}
+
+/* FLOAT BUTTONS */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+width:65px;
+height:65px;
+background:linear-gradient(135deg,#25D366,#00ff88);
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+color:white;
+box-shadow:0 15px 35px rgba(0,0,0,.5);
+}
+
+.callfloat{
+position:fixed;
+bottom:95px;
+right:20px;
+width:65px;
+height:65px;
+background:linear-gradient(135deg,#ff512f,#dd2476);
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:24px;
+color:white;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+.services{grid-template-columns:1fr}
+.gallery{grid-template-columns:1fr}
+.hero h1{font-size:30px}
+}
+.whatsapp,
+.callfloat{
+text-decoration:none !important;
+border:none;
+outline:none;
+}
+
+.whatsapp i,
+.callfloat i{
+text-decoration:none !important;
+border:none;
+}
+.whatsapp i,
+.callfloat i{
+line-height:1;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">The Coral Banquet</div>
+<a href="#book" class="bookbtn">Book Now</a>
+</nav>
+
+<div class="hero">
+<h1>The Coral Banquet</h1>
+</div>
+
+<section>
+<div class="title">Events We Host</div>
+<div class="services">
+<div class="card">Wedding Events</div>
+<div class="card">Corporate Events</div>
+<div class="card">Birthday Parties</div>
+<div class="card">Ring Ceremony</div>
+<div class="card">Exhibitions</div>
+<div class="card">Sale Events</div>
+</div>
+</section>
+
+<section>
+<div class="title">Gallery</div>
+<div class="gallery">
+<img src="./photos/1.jpg">
+<img src="./photos/2.jpg">
+<img src="./photos/3.jpg">
+<img src="./photos/4.jpg">
+<img src="./photos/5.jpg">
+<img src="./photos/6.jpg">
+<img src="./photos/7.jpg">
+<img src="./photos/8.jpg">
+</div>
+</section>
+
+<section id="book">
+<div class="title">Book Your Event</div>
+<div class="form">
+
+<form id="form">
+
+<input name="name" placeholder="Your Name" required>
+<input name="phone" placeholder="Phone Number" required>
+
+<label>Event Date</label>
+<input type="date" name="date" required>
+
+
+
+<label>Event Type</label>
+<select name="event" required>
+<option value="">Select Event</option>
+<option>Wedding</option>
+<option>Corporate</option>
+<option>Birthday</option>
+<option>Ring Ceremony</option>
+<option>Exhibition</option>
+<option>Sale</option>
+</select>
+
+<input name="guests" placeholder="Number of Guests">
+<textarea name="message" placeholder="Requirements"></textarea>
+
+<button type="submit">Send Enquiry on WhatsApp</button>
+
+</form>
+
+</div>
+</section>
+
+<div class="footer">
+<div class="footer-container">
+
+<div>
+<h3>The Coral Banquet</h3>
+<p>Premium venue for weddings, parties and corporate events.</p>
+</div>
+
+<div>
+<h3>Contact</h3>
+<p>📞 9660031880</p>
+<p>📞 9314506385</p>
+<p>📞 9314956565</p>
+<p>✉️ thecoraljaipur@gmail.com</p>
+<p>Jaipur, Rajasthan</p>
+</div>
+
+<div>
+<h3>Events</h3>
+<p>Wedding</p>
+<p>Corporate</p>
+<p>Birthday</p>
+<p>Ring Ceremony</p>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© The Coral Banquet Jaipur
+</div>
+
+<div style="margin-top:15px;">
+<iframe 
+src="https://www.google.com/maps?q=The%20Coral%20Banquet%20Hall%20Jaipur&output=embed"
+width="100%" 
+height="160"
+style="border:0;border-radius:8px;"
+loading="lazy">
+</iframe>
+</div>
+
+</div>
+
+<a class="whatsapp" href="https://wa.me/919660031880" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+<a class="callfloat" href="tel:9660031880">
+<i class="fas fa-phone"></i>
+</a>
+
+<script>
+document.getElementById("form").addEventListener("submit", function(e){
+e.preventDefault();
+
+const form = document.getElementById("form");
+
+const name = form.name.value;
+const phone = form.phone.value;
+const date = form.date.value;
+const event = form.event.value;
+const guests = form.guests.value;
+const message = form.message.value;
+
+const text =
+`New Booking Enquiry - The Coral Banquet
+
+Name: ${name}
+Phone: ${phone}
+Event Date: ${date}
+Event Type: ${event}
+Guests: ${guests}
+Requirements: ${message}`;
+
+const url = "https://wa.me/919660031880?text=" + encodeURIComponent(text);
+
+window.location.href = url;
+});
+</script>
+
+</body>
+</html>
