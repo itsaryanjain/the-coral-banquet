@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Coral Banquet</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-
 
 <title>The Coral Banquet | Best Banquet Hall in Jaipur for Weddings & Events</title>
 
 <meta name="description" content="The Coral Banquet is a premium banquet hall in Jaipur for weddings, parties and corporate events. Book now. Call 9660031880">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://thecoralbanquet.in/">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Poppins}
 body{
@@ -179,12 +179,6 @@ opacity:.8;
 margin:6px 0;
 }
 
-.footer-bottom{
-text-align:center;
-margin-top:30px;
-opacity:.6;
-}
-
 /* FLOAT BUTTONS */
 .whatsapp{
 position:fixed;
@@ -230,11 +224,6 @@ border:none;
 outline:none;
 }
 
-.whatsapp i,
-.callfloat i{
-text-decoration:none !important;
-border:none;
-}
 .whatsapp i,
 .callfloat i{
 line-height:1;
@@ -294,8 +283,6 @@ justify-content:center;
 <label>Event Date</label>
 <input type="date" name="date" required>
 
-
-
 <label>Event Type</label>
 <select name="event" required>
 <option value="">Select Event</option>
@@ -344,8 +331,6 @@ justify-content:center;
 
 </div>
 
-
-
 <div style="margin-top:15px;">
 <iframe 
 src="https://www.google.com/maps?q=The%20Coral%20Banquet%20Hall%20Jaipur&output=embed"
@@ -365,15 +350,14 @@ loading="lazy">
 <a class="callfloat" href="tel:9660031880">
 <i class="fas fa-phone"></i>
 </a>
+
 <footer style="text-align:center; padding:15px; font-size:14px; color:#777;">
   © <span id="year"></span> The Coral Banquet. All rights reserved.
 </footer>
 
 <script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+document.getElementById("year").textContent = new Date().getFullYear();
 
-<script>
 document.getElementById("form").addEventListener("submit", function(e){
 e.preventDefault();
 
@@ -397,7 +381,6 @@ Guests: ${guests}
 Requirements: ${message}`;
 
 const url = "https://wa.me/919660031880?text=" + encodeURIComponent(text);
-
 window.location.href = url;
 });
 </script>
