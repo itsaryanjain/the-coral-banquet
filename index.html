@@ -362,6 +362,13 @@ loading="lazy">
 <a class="callfloat" href="tel:9660031880">
 <i class="fas fa-phone"></i>
 </a>
+<footer style="text-align:center; padding:15px; font-size:14px; color:#777;">
+  © <span id="year"></span> The Coral Banquet. All rights reserved.
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 <script>
 document.getElementById("form").addEventListener("submit", function(e){
